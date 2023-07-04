@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contactos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <app-person-card *ngFor="let person of persons" [person]="person" routerLink="/details/{{person.id}}">
+    </app-person-card>
+  </div>
+</ion-content>
+
+<!--
+<ion-content>
+  <div>
+    <app-company-card *ngFor="let company of companies" [company]="company"
+      routerLink="/details/{{company.id}}"></app-company-card>
+  </div>
+</ion-content>-->

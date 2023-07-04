@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="!person"></ion-spinner>
+  <ion-card *ngIf="person">
+    <ion-card-header>
+      <ion-card-title>{{person.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="deletePerson(person.id)">Eliminar</ion-button>
+    <ion-card-content>
+      <h2>Surname: {{person.surname}}</h2>
+      <small>{{person.company}} </small>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-content>
+  <ion-spinner *ngIf="!company"></ion-spinner>
+  <ion-card *ngIf="company">
+    <ion-card-header>
+      <ion-card-title>{{company.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Surname: {{company.web}}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
